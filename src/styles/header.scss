@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 3rem;
+  background: chocolate;
+  color: #ddd;
+
+  span {
+    cursor: pointer;
+  }
+
+  span:first-of-type {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+}

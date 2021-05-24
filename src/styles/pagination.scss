@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.35em;
+
+  button {
+    padding: 0.3rem 1rem;
+    border: none;
+    font-size: 1rem;
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  .total {
+    margin-right: 1rem;
+    color: #999;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.2em;
+    .total {
+      margin-right: 0.25em;
+
+      flex-shrink: 1;
+    }
+    button {
+      padding: 0.2em 0.6em;
+    }
+  }
+}

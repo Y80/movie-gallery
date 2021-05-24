@@ -1,0 +1,48 @@
+.detail::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(rgb(218, 218, 218) 1px, transparent 2px) repeat;
+  background-size: 50px 50px;
+  content: '';
+}
+
+.detail {
+  margin: 0 auto;
+  padding-top: 3rem;
+  max-width: 600px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  & > span:first-child {
+    display: inline-block;
+    margin-bottom: 1em;
+    color: chocolate;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .detail {
+    max-width: 95%;
+
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+}

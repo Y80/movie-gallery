@@ -1,0 +1,18 @@
+div.list {
+  & > h2 {
+    padding-left: 2rem;
+  }
+
+  .error-box {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.list {
+    & > h2 {
+      padding-left: 0.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}

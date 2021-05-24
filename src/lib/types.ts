@@ -32,7 +32,7 @@ type MovieDetailKeys =
   | 'Country'
   | 'Awards'
   | 'Poster'
-  | 'Ratings'
+  // | 'Ratings'
   | 'Metascore'
   | 'imdbRating'
   | 'imdbVotes'
@@ -45,11 +45,13 @@ type MovieDetailKeys =
 
 export type MovieBrief = Record<MovieBriefKeys, string>;
 
-export type MovieDetail = Record<MovieDetailKeys, string>;
+export interface MovieDetail extends Record<MovieDetailKeys, string> {
+  Ratings: { Source: string; Value: string }[];
+}
 
 export interface SearchResponseBody extends BaseResponseBody {
   totalResults: string;
   Search: MovieBrief[];
 }
 
-export interface DetailResponseBody extends BaseResponseBody {}
+export interface DetailResponseBody extends BaseResponseBody, MovieDetail {}
