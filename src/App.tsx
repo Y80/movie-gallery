@@ -10,7 +10,8 @@ import Detail from '@/pages/Detail';
 export default function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/movie-gallery">
+<!--       <BrowserRouter basename="/movie-gallery"> -->
+      <BrowserRouter >
         <Header />
         <Switch>
           <Redirect path="/" to="/home" exact />
